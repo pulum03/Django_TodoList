@@ -1,0 +1,16 @@
+{% extends 'todo_main/common/header.html' %}
+{% load staticfiles %}
+{% block main %}
+
+<section id = "blog">
+	<div class = "container">
+		<form method = "POST" class = "post-form">
+			{% csrf_token %}
+			
+			<p> Are you sure to delete {{todo_list.title}}?</p>
+			<input type = "submit" class = "save btn btn-default" value = "Confirm"/>
+		</form>
+	</div>
+</section>
+
+{% endblock main %}

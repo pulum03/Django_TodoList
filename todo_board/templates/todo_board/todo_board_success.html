@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		message = "{{message}}";
+		console.log(message);
+		alert(message);
+		window.location.href = "{% url 'todo_board:todo_board' %}"
+	</script>
+</body>
+</html>

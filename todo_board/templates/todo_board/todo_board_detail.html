@@ -1,0 +1,14 @@
+{% extends 'todo_main/common/header.html' %}
+{% load staticfiles %}
+{% block main %}
+<section id = "blog">
+	<div class = "container">
+		{{todo_list}}
+		<h2>{{todo_list.title}}</h2>
+		<p>{{todo_list.content}}</p><br>
+		<h2><a href = "{% url 'todo_board:todo_board_update' pk=todo_list.pk %}">modify</a></h2>
+		<h2><a href = "{% url 'todo_board:todo_board_delete' pk=todo_list.pk %}">delete</a></h2>
+	</div>
+</section>
+
+{% endblock main %}
